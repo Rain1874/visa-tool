@@ -3,7 +3,7 @@
  * @email: zhangxy@troy.cn
  * @Date: 2025-01-10 17:05:03
  * @LastEditors: zhangxy
- * @LastEditTime: 2025-01-13 16:35:21
+ * @LastEditTime: 2025-01-13 16:49:13
  */
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
@@ -16,10 +16,11 @@ import proxy from './proxy/proxy.dev';
 const isDevelopment = process.env.NODE_ENV === 'development';
 // https://vitejs.dev/config/
 
+console.log('isDevelopment',isDevelopment)
+
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return defineConfig({
-    base: isDevelopment ? '/': '/visa-tool/',
     plugins: [
       react({
         babel: {
@@ -70,7 +71,7 @@ export default ({ mode }) => {
         },
       },
     },
-    base: '/',
+    base: isDevelopment ? '/': '/visa-tool/',
     server: {
       host: '0.0.0.0',
       port: proxy.port,
