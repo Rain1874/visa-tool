@@ -3,7 +3,7 @@
  * @email: zhangxy@troy.cn
  * @Date: 2025-01-10 17:05:03
  * @LastEditors: zhangxy
- * @LastEditTime: 2025-01-13 18:17:06
+ * @LastEditTime: 2025-01-13 18:19:35
  */
 
 import { Form, Radio, Input, Button, message } from 'antd';
@@ -42,7 +42,7 @@ const Home = () => {
   async function generateExcelFromTemplate(type, data) {
     try {
       // 1. 读取本地模板文件
-      const response = await fetch(isDevelopment ? `/template/${type}.xlsx` : `/visa-tool/disttemplate/${type}.xlsx`); // 如果模板放在 public 文件夹
+      const response = await fetch(isDevelopment ? `/template/${type}.xlsx` : `/visa-tool/dist/template/${type}.xlsx`); // 如果模板放在 public 文件夹
       const arrayBuffer = await response.arrayBuffer();
       const workbook = new ExcelJS.Workbook();
       await workbook.xlsx.load(arrayBuffer);
