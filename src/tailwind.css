@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: 'SansNormal';
+    src: url(@/assets/fonts/SourceHanSansCN-Normal.otf);
+  }
+  @font-face {
+    font-family: 'SansBold';
+    src: url(@/assets/fonts/SourceHanSansCN-Bold.otf);
+  }
+
+  @font-face {
+    font-family: 'SansRegular';
+    src: url(@/assets/fonts/SourceHanSansCN-Regular.otf);
+  }
+
+  @font-face {
+    font-family: 'SansMedium';
+    src: url(@/assets/fonts/SourceHanSansCN-Medium.otf);
+  }
+
+  @font-face {
+    font-family: 'NumNormal';
+    src: url(@/assets/fonts/D-DIN.TTF);
+  }
+
+  @font-face {
+    font-family: 'Pang';
+    src: url(@/assets/fonts/PANGMENZHENGDAO.TTF);
+  }
+}

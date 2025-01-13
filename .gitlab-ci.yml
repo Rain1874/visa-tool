@@ -1,0 +1,22 @@
+stages:
+  - sonarqube_scan
+  - sendmail
+
+sonarqube_scan_job:
+  stage: sonarqube_scan
+  script:
+    - sonar-scanner -Dsonar.projectName=$CI_PROJECT_NAME -Dsonar.projectKey=$CI_PROJECT_NAME -Dsonar.branch.name=${CI_COMMIT_REF_NAME}
+  tags:
+    - sonar-scanner
+  when: always
+
+sendmail_job:
+  stage: sendmail
+  script:
+    - echo $GITLAB_USER_EMAIL
+    - echo $CI_PROJECT_NAME
+    - echo $CI_COMMIT_REF_NAME
+    - python /opt/sonarqube_api.py $CI_PROJECT_NAME $CI_COMMIT_REF_NAME $GITLAB_USER_EMAIL
+    
+  tags:
+    - sonar-scanner
