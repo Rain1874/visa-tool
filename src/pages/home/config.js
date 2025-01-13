@@ -3,7 +3,7 @@
  * @email: zhangxy@troy.cn
  * @Date: 2025-01-13 10:13:24
  * @LastEditors: zhangxy
- * @LastEditTime: 2025-01-13 14:10:12
+ * @LastEditTime: 2025-01-13 16:19:22
  */
 export const prompt = {
   retire: {
@@ -23,7 +23,7 @@ export const prompt = {
     `,
   },
 };
-const a = {
+const template = {
   "social_security_number": "2323113264264.0010",
   "date_of_registration": "2019-09-30",
   "name": "Gan Huashan",
