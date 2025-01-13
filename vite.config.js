@@ -3,7 +3,7 @@
  * @email: zhangxy@troy.cn
  * @Date: 2025-01-10 17:05:03
  * @LastEditors: zhangxy
- * @LastEditTime: 2025-01-13 14:27:23
+ * @LastEditTime: 2025-01-13 16:35:21
  */
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
@@ -19,6 +19,7 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return defineConfig({
+    base: isDevelopment ? '/': '/visa-tool/',
     plugins: [
       react({
         babel: {
