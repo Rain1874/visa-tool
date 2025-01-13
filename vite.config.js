@@ -3,7 +3,7 @@
  * @email: zhangxy@troy.cn
  * @Date: 2025-01-10 17:05:03
  * @LastEditors: zhangxy
- * @LastEditTime: 2025-01-13 16:49:13
+ * @LastEditTime: 2025-01-13 16:56:45
  */
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
@@ -71,7 +71,7 @@ export default ({ mode }) => {
         },
       },
     },
-    base: isDevelopment ? '/': '/visa-tool/',
+    base: isDevelopment ? '/': '/visa-tool/dist/',
     server: {
       host: '0.0.0.0',
       port: proxy.port,
