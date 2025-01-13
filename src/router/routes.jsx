@@ -20,8 +20,7 @@ const routes = [
     auth: false,
   },
   {
-    // path: isDevelopment ? '/' : '/dist/',
-    path: '/visa-tool/dist/',
+    path: isDevelopment ? '/' : '/visa-tool/dist/',
     element: <Home />,
     auth: true,
     children: [],
