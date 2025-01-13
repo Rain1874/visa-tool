@@ -3,7 +3,7 @@
  * @email: zhangxy@troy.cn
  * @Date: 2025-01-10 17:05:03
  * @LastEditors: zhangxy
- * @LastEditTime: 2025-01-13 18:08:17
+ * @LastEditTime: 2025-01-13 18:11:44
  */
 /* eslint-disable react-refresh/only-export-components */
 import { lazy } from 'react';
@@ -20,7 +20,8 @@ const routes = [
     auth: false,
   },
   {
-    path: isDevelopment ? '/' : '/dist/',
+    // path: isDevelopment ? '/' : '/dist/',
+    path: '/visa-tool/dist/',
     element: <Home />,
     auth: true,
     children: [],

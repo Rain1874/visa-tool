@@ -1,4 +1,4 @@
-import{j as ve}from"./index-5ageaXn7.js";import{r as $e,h as Wt,g as cr}from"./react-CyANX8FE.js";import{u as ir}from"./styled-components.browser.esm-DtGYYKJI.js";import{c as hr,F as Oe,a as fr,I as dr,B as Qe,s as We}from"./antd-CLFyfxUA.js";const tr={retire:{content:`
+import{j as ve}from"./index-ZgAayGM3.js";import{r as $e,h as Wt,g as cr}from"./react-CyANX8FE.js";import{u as ir}from"./styled-components.browser.esm-DtGYYKJI.js";import{c as hr,F as Oe,a as fr,I as dr,B as Qe,s as We}from"./antd-CLFyfxUA.js";const tr={retire:{content:`
       提取图片中的信息并翻译成英文，并保存成json数据，我需要的信息如下:其中字段名在()内，要求在[]内
       1.社会保障号码(social_security_number)
       2.发证日期(date_of_registration)
