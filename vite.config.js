@@ -3,7 +3,7 @@
  * @email: zhangxy@troy.cn
  * @Date: 2025-01-10 17:05:03
  * @LastEditors: zhangxy
- * @LastEditTime: 2025-01-13 16:56:45
+ * @LastEditTime: 2025-01-14 10:35:19
  */
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
@@ -13,6 +13,7 @@ import { viteMockServe } from 'vite-plugin-mock';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 import proxy from './proxy/proxy.dev';
+import defaultSetting from './src/defaultSetting';
 const isDevelopment = process.env.NODE_ENV === 'development';
 // https://vitejs.dev/config/
 
@@ -71,7 +72,7 @@ export default ({ mode }) => {
         },
       },
     },
-    base: isDevelopment ? '/': '/visa-tool/dist/',
+    base: isDevelopment ? '/': defaultSetting.path,
     server: {
       host: '0.0.0.0',
       port: proxy.port,

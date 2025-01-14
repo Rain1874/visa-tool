@@ -7,6 +7,7 @@
  */
 /* eslint-disable react-refresh/only-export-components */
 import { lazy } from 'react';
+import defaultSetting from '../defaultSetting';
 
 const ErrorBoundary = lazy(() => import('../pages/errorBoundary'));
 const Home = lazy(() => import('../pages/home'));
@@ -20,7 +21,7 @@ const routes = [
     auth: false,
   },
   {
-    path: isDevelopment ? '/' : '/visa-tool/dist/',
+    path: isDevelopment ? '/' : {defaultSetting.path},
     element: <Home />,
     auth: true,
     children: [],
