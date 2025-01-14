@@ -1,0 +1,1 @@
+import{j as t}from"./index-tx-ARuP9.js";import{u as s}from"./react-CziUIIET.js";import{R as o,B as a}from"./antd-COlrnv5r.js";const u=()=>{const r=s();return t.jsx(o,{status:"404",title:"404",subTitle:"对不起, 您访问的页面不存在.",extra:t.jsx(a,{type:"primary",onClick:()=>{r("/")},children:"返回首页"})})};export{u as default};
